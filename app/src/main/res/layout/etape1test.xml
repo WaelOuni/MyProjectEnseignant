@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.84" >
+
+        <EditText
+            android:id="@+id/matieretestInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/niveautestInput"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="Matiére" />
+
+        <EditText
+            android:id="@+id/niveautestInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/matieretestInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:ems="10"
+            android:hint="Niveau" />
+
+        <EditText
+            android:id="@+id/seancetestInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/niveautestInput"
+            android:layout_below="@+id/niveautestInput"
+            android:layout_marginTop="18dp"
+            android:ems="10"
+            android:hint="Séance" />
+
+        <DatePicker
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/seancetestInput"
+            android:layout_below="@+id/seancetestInput"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="13dp"
+            android:calendarViewShown="false" />
+
+    </RelativeLayout>
+
+</LinearLayout>

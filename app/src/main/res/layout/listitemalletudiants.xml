@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="36.70" >
+
+        <TextView
+            android:id="@+id/cinAllEtud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="0.80"
+            android:text="555555555" />
+
+        <TextView
+            android:id="@+id/nomAllEtud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="19dp"
+            android:layout_weight="0.80"
+            android:text="mmmmm" />
+
+        <TextView
+            android:id="@+id/genreAllEtuditants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/inscriptionAllEtudiants"
+            android:layout_alignBottom="@+id/inscriptionAllEtudiants"
+            android:layout_alignLeft="@+id/nomAllEtud"
+            android:layout_weight="0.80"
+            android:text="homme" />
+
+        <TextView
+            android:id="@+id/niveauAllEtudiants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/genreAllEtuditants"
+            android:layout_alignBottom="@+id/genreAllEtuditants"
+            android:layout_alignRight="@+id/prenomAllEtud"
+            android:layout_weight="0.80"
+            android:text="bac + 5" />
+
+        <TextView
+            android:id="@+id/emailAllEtudiants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/inscriptionAllEtudiants"
+            android:layout_below="@+id/inscriptionAllEtudiants"
+            android:layout_weight="0.80"
+            android:text="mopasse@jijko.jjj" />
+
+        <TextView
+            android:id="@+id/telephoneAllEtudiants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/emailAllEtudiants"
+            android:layout_alignBottom="@+id/emailAllEtudiants"
+            android:layout_alignRight="@+id/niveauAllEtudiants"
+            android:layout_weight="0.80"
+            android:text="+21696969696" />
+
+        <TextView
+            android:id="@+id/inscriptionAllEtudiants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/cinAllEtud"
+            android:layout_weight="0.80"
+            android:text="55555544" />
+
+        <TextView
+            android:id="@+id/prenomAllEtud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/niveauAllEtudiants"
+            android:layout_marginLeft="38dp"
+            android:layout_toRightOf="@+id/nomAllEtud"
+            android:layout_weight="0.80"
+            android:text="555555" />
+
+    </RelativeLayout>
+
+</LinearLayout>

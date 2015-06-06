@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="title_activity_login">Connexion</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Votre email</string>
+    <string name="prompt_password">Votre mot de passe</string>
+    <string name="action_sign_in_register"><b>Sign in</b> ou s inscrire sur MyApp</string>
+    <string name="action_sign_in_short">Connectez</string>
+    <string name="action_forgot_password">Retrouvez votre mot de passe</string>
+    <string name="login_progress_signing_in">Connexion en cours...</string>
+    <string name="error_invalid_email">Votre email est incorrect</string>
+    <string name="error_invalid_password">Ce mot de passe est trop petit</string>
+    <string name="error_incorrect_password">Votre mot de passe est incorrect</string>
+    <string name="error_field_required">Ce champ est obligatoire</string>
+
+</resources>

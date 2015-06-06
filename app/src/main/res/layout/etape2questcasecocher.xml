@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.24" >
+
+        <Button
+            android:id="@+id/vider2questBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/enregistrerquestBtn"
+            android:layout_alignBottom="@+id/enregistrerquestBtn"
+            android:layout_alignRight="@+id/choixC_Input"
+            android:text="Vider" />
+
+        <EditText
+            android:id="@+id/choixA_Input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/choixString"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="choix A" />
+
+        <EditText
+            android:id="@+id/choixB_Input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/choixA_Input"
+            android:layout_below="@+id/choixA_Input"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="Choix B" />
+
+        <EditText
+            android:id="@+id/choixC_Input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/choixB_Input"
+            android:layout_below="@+id/choixB_Input"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="Choix C" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/choixString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@+id/vider2questBtn"
+            android:text="Les choix possibles :"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/enregistrerquestBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/choixC_Input"
+            android:layout_below="@+id/choixC_Input"
+            android:layout_marginTop="16dp"
+            android:text="Enregistrer" />
+
+        <RadioGroup
+            android:id="@+id/radioG1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vider2questBtn"
+            android:layout_centerHorizontal="true" >
+
+            <RadioButton
+                android:id="@+id/espaceensRadio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Passer a l&apos;espase Enseignant " />
+
+            <RadioButton
+                android:id="@+id/nouvquestioncbRadio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ajouter une nouvelle question " />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</LinearLayout>

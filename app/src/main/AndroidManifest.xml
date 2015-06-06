@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="weal.exemple.com.myprojectenseignant" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="weal.exemple.com.myprojectenseignant.LogA" android:label="@string/title_activity_login" android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.inE" android:label="@string/title_activity_inscription__enseignant" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.EEn" android:label="@string/title_activity_espace_enseignant" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.QuT" android:label="@string/title_activity_question_text" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.CrQ" android:label="@string/title_activity_creer_question" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.QuCC" android:label="@string/title_activity_question_case_cocher" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.CrT" android:label="@string/title_activity_creer_test" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.StatT" android:label="@string/title_activity_statistique_test" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.ReT" android:label="@string/title_activity_resultat_test" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.Stat" android:label="@string/title_activity_statistique" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.AlQ" android:label="@string/title_activity_all_questions" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.ChQuT" android:label="@string/title_activity_choix_questions_test" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.VRe" android:label="@string/title_activity_voir_resultat" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.FiCT" android:label="@string/title_activity_fin_cree_test" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.AlT" android:label="@string/title_activity_all_tests" />
+        <activity android:name="weal.exemple.com.myprojectenseignant.AlE" android:label="@string/title_activity_all_etudiants" />
+
+    </application>
+
+</manifest>

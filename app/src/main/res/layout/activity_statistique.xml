@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myproject.Statistique"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/stat2" />
+
+            <TextView
+                android:id="@+id/idqcc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistiques de test"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/matStatTestInp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:ems="10"
+                android:hint="Matiére :" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/seanStatTestInp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/matStatTestInp"
+                android:layout_below="@+id/matStatTestInp"
+                android:layout_marginTop="1dp"
+                android:ems="10"
+                android:hint="Séance :" />
+
+            <DatePicker
+                android:id="@+id/dateStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/seanStatTestInp"
+                android:layout_below="@+id/seanStatTestInp"
+                android:layout_marginTop="1dp"
+                android:calendarViewShown="false" />
+
+            <Button
+                android:id="@+id/VoirStatBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/dateStat"
+                android:layout_below="@+id/dateStat"
+                android:layout_marginTop="1dp"
+                android:text="Voir statistiques" />
+
+            <Button
+                android:id="@+id/confirmerStatBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/VoirStatBtn"
+                android:layout_alignBottom="@+id/VoirStatBtn"
+                android:layout_toRightOf="@+id/VoirStatBtn"
+                android:text="Confirmer" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+

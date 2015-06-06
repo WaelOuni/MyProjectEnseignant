@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyProjectEnseignant</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_inscription__enseignant">Inscription_Enseignant</string>
+    <string name="title_activity_espace_enseignant">EspaceEnseignant</string>
+    <string name="title_activity_question_text">QuestionText</string>
+    <string name="title_activity_creer_question">CreerQuestion</string>
+    <string name="title_activity_question_case_cocher">QuestionCaseCocher</string>
+    <string name="title_activity_creer_test">CreerTest</string>
+    <string name="title_activity_statistique_test">StatistiqueTest</string>
+    <string name="title_activity_resultat_test">ResultatTest</string>
+    <string name="title_activity_statistique">Statistique</string>
+    <string name="title_activity_all_questions">AllQuestions</string>
+    <string name="title_activity_list_questionscc">ListQuestionscc</string>
+    <string name="title_activity_all_quest_cc">AllQuestCC</string>
+    <string name="title_activity_choix_questions_test">ChoixQuestionsTest</string>
+    <string name="title_activity_voir_resultat">VoirResultat</string>
+    <string name="title_activity_fin_cree_test">FinCreeTest</string>
+    <string name="title_activity_all_tests">AllTests</string>
+    <string name="title_activity_all_etudiants">AllEtudiants</string>
+    <string name="title_activity_inscription_etudiant">InscriptionEtudiant</string>
+
+</resources>

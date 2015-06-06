@@ -1,0 +1,114 @@
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myproject.QuestionText"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_edit" />
+
+            <TextView
+                android:id="@+id/questiontextString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Question de type texte"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/enoceInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="Enoncé" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/reponseInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enoceInput"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Réponse" />
+
+            <TextView
+                android:id="@+id/noticereponseString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/reponseInput"
+                android:layout_below="@+id/reponseInput"
+                android:layout_marginTop="16dp"
+                android:text="Les mots clés doit etre séparer par /"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Button
+                android:id="@+id/enregistrerqtBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/reponseInput"
+                android:layout_below="@+id/noticereponseString"
+                android:layout_marginTop="43dp"
+                android:text="Enregistrer" />
+
+            <Button
+                android:id="@+id/viderqtBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/enregistrerqtBtn"
+                android:layout_alignRight="@+id/noticereponseString"
+                android:text="Vider" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/noticereponseString"
+                android:layout_below="@+id/enregistrerqtBtn" >
+
+                <RadioButton
+                    android:id="@+id/espaceensqtRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Passer a l&apos;espase Enseignant " />
+
+                <RadioButton
+                    android:id="@+id/nouvquestionqtRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Ajouter une nouvelle question " />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

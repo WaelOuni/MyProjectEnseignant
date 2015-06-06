@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <EditText
+            android:id="@+id/dureetestInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Durée de test" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/coursprepareInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dureetestInput"
+            android:layout_below="@+id/dureetestInput"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="Cours à préparer"
+            android:inputType="textMultiLine"
+            android:minHeight="110dp" />
+
+        <Button
+            android:id="@+id/vider2creetestBtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coursprepareInput"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Vider" />
+
+        <Button
+            android:id="@+id/choixquestBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vider2creetestBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:text="Choix de questions" />
+
+    </RelativeLayout>
+
+</LinearLayout>

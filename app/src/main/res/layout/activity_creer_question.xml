@@ -1,0 +1,113 @@
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myproject.CreerQuestion"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/sym_action_chat" />
+
+            <TextView
+                android:id="@+id/creerquestString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creer une question"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/matiereInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="33dp"
+                android:ems="10"
+                android:hint="Matière" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/nivetudInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/matiereInput"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="52dp"
+                android:ems="10"
+                android:hint="Niveau d&apos;études" />
+
+            <TextView
+                android:id="@+id/typeString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/nivetudInput"
+                android:layout_centerVertical="true"
+                android:text="Type :"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/vidercreerquestBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/enregcreerquestBtn"
+                android:layout_alignBottom="@+id/enregcreerquestBtn"
+                android:layout_alignRight="@+id/nivetudInput"
+                android:text="Vider" />
+
+            <Button
+                android:id="@+id/enregcreerquestBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/typeString"
+                android:layout_below="@+id/radioG2"
+                android:layout_marginTop="18dp"
+                android:text="Enregistrer" />
+
+            <RadioGroup
+                android:id="@+id/radioG2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/vidercreerquestBtn"
+                android:layout_alignTop="@+id/typeString" >
+
+                <RadioButton
+                    android:id="@+id/casecocherRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Case à concher" />
+
+                <RadioButton
+                    android:id="@+id/textRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Texte" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

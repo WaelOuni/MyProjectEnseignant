@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/idtest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/nivtest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/mattest"
+            android:layout_alignBottom="@+id/mattest"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="18dp" />
+
+        <TextView
+            android:id="@+id/durtest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dattest"
+            android:layout_alignBottom="@+id/dattest"
+            android:layout_alignLeft="@+id/nivtest" />
+
+        <TextView
+            android:id="@+id/mattest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/idtest"
+            android:layout_alignBottom="@+id/idtest"
+            android:layout_marginLeft="80dp"
+            android:layout_toRightOf="@+id/idtest" />
+
+        <TextView
+            android:id="@+id/dattest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/mattest"
+            android:layout_below="@+id/mattest"
+            android:layout_marginTop="22dp" />
+
+        <TextView
+            android:id="@+id/seatest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dattest"
+            android:layout_alignLeft="@+id/idtest" />
+
+    </RelativeLayout>
+
+</LinearLayout>

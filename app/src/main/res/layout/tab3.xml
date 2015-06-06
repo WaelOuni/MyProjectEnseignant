@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" >
+
+                            <ImageView
+                                android:id="@+id/monespaceImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@android:drawable/ic_input_add" />
+
+                            <TextView
+                                android:id="@+id/creerCompteString"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Creer compte enseignant"
+                                android:textAppearance="?android:attr/textAppearanceLarge" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <EditText
+                                android:id="@+id/gradeInput"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="26dp"
+                                android:ems="10"
+                                android:hint="Grade" />
+
+                            <Button
+                                android:id="@+id/creercompteBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="34dp"
+                                android:text="Créer un compte" />
+
+                            <EditText
+                                android:id="@+id/specialiteInput"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/gradeInput"
+                                android:layout_below="@+id/gradeInput"
+                                android:layout_marginTop="38dp"
+                                android:ems="10"
+                                android:hint="Specialité " />
+
+                            <EditText
+                                android:id="@+id/numTelInput"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/specialiteInput"
+                                android:layout_below="@+id/specialiteInput"
+                                android:layout_marginTop="76dp"
+                                android:ems="10"
+                                android:hint="Numero de télèphone" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+    
+</LinearLayout>

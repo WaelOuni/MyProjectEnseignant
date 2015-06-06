@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/checkbox_on_background" />
+
+            <TextView
+                android:id="@+id/questcheckboxString"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:text="Question  de type case à cocher"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/enonceccInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="46dp"
+                android:ems="10"
+                android:hint="Enoncé" />
+
+            <EditText
+                android:id="@+id/reponseccInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/enonceccInput"
+                android:layout_below="@+id/enonceccInput"
+                android:layout_marginTop="38dp"
+                android:ems="10"
+                android:hint="Reponse" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/vidercasecocherBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/reponseccInput"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="58dp"
+                android:text="Vider" />
+
+        </RelativeLayout>
+
+</LinearLayout>
