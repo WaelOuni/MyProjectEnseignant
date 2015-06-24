@@ -135,7 +135,7 @@ public class AlE extends Activity {
                 for(int i=0;i<jArray.length();i++){
                     JSONObject json_data = jArray.getJSONObject(i);
                     // Affichage ID_question et Nom_question dans le LogCat
-                    Log.i("log_tag","cin: "+json_data.getInt("cin") +
+                    Log.i("log_tag","cin: "+json_data.getInt("cin_etudiant") +
                                     ", nom: "+json_data.getString("nom")+
                                     ", prenom: "+json_data.getString("prenom")+
                                     ", genre: "+json_data.getString("genre")+
@@ -144,9 +144,9 @@ public class AlE extends Activity {
                                     ", inscription: "+json_data.getString("inscription")+
                                     ", telephone: "+json_data.getString("telephone")
                     );
-                    // RÃ©sultats de la requÃªte
+                    // Resultats de la requete
 
-                    returnString += "\n\t"+json_data.getInt("cin")+"." + json_data.getString("nom")+".." + json_data.getString("prenom")
+                    returnString += "\n\t"+json_data.getInt("cin_etudiant")+"." + json_data.getString("nom")+".." + json_data.getString("prenom")
                             +"..." + json_data.getString("genre")+"...." + json_data.getString("email")+"....." + json_data.getString("niveau")
                             +"......" + json_data.getString("inscription")+"......." + json_data.getString("telephone"); 	}
             }
@@ -210,7 +210,7 @@ public class AlE extends Activity {
 
 
             for(int i=1;i< genres.length;i++){
-                String chaine = new String();
+                String chaine ;
                 // mettre genre dans une chaine de caractére
                 chaine=genres[i].substring(genres[i].indexOf("...")+3,genres[i].indexOf("....") );
                 genres[i]=chaine;

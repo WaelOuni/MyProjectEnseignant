@@ -117,7 +117,7 @@ public class ReT extends Activity {
                     finish();
 
                 }
-                else Toast.makeText(getApplicationContext(), "Tous les champs sont obligatoires !!! !", Toast.LENGTH_LONG).show();
+                else Toast.makeText(getApplicationContext(), "All fields are required !!!", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -212,7 +212,7 @@ public class ReT extends Activity {
 
 
     public void setUrl(String newstr){
-        strURL+=newstr;
+        strURL +=newstr;
     }
 
     public   String strURL = "http://10.0.3.2/MyProjectConnect/Enseignant/";

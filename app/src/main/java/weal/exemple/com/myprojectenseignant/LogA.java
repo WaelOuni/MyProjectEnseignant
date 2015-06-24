@@ -272,9 +272,7 @@ public class LogA extends Activity {
                     );
                     // RÃ©sultats de la requÃªte
                     returnString += "\n\t"+ json_data.getString("email")+":"+json_data.getString("password");
-
                 }
-
             }
 
             catch(JSONException e){
@@ -287,13 +285,9 @@ public class LogA extends Activity {
         }
 
         protected void onPostExecute(String returnString) {
-            //	Toast.makeText(AllQuestCC.this,returnString, Toast.LENGTH_LONG).show();
-
             strs=returnString.split("\n\t");
-
         }
     }
-
 
 
     /**
@@ -314,6 +308,7 @@ public class LogA extends Activity {
 
 ///////////////    mettre les donnes de l'authentification a partir de bd
             for (String credential : strs) {
+                Log.i("cccccccc", credential);
                 String[] pieces = credential.split(":");
                 if (pieces[0].equals(mEmail)) {
                     // Account exists, return true if the password matches.
@@ -333,7 +328,7 @@ public class LogA extends Activity {
                 Intent choixIntent = new Intent(getApplicationContext(), EEn.class);
                 String str = LogA.this.mEmail.toString();
                 choixIntent.putExtra("login",str );
-                Toast.makeText(getApplicationContext(), "Authentification avec succées", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "You log in ", Toast.LENGTH_LONG).show();
 
                 startActivityForResult(choixIntent, 90);
                 finish();

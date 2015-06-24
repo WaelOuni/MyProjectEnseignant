@@ -4,88 +4,99 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.myproject.ResultatTest"
-    tools:ignore="MergeRootFrame" >
+    tools:ignore="MergeRootFrame">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/resultat" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/resultatString"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Resultat de test"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/resultat" />
+
+                <TextView
+                    android:id="@+id/resultatString"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="50dp"
+                    android:text="Resultat de test"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/seanceresultInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/espace_between_components"
+                    android:layout_marginTop="@dimen/espace_between_components"
+                    android:ems="10"
+                    android:hint="Séance" />
+
+
+                <EditText
+                    android:id="@+id/matiereresultInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/espace_between_components"
+                    android:layout_marginTop="@dimen/espace_between_components"
+                    android:ems="10"
+                    android:hint="Matière" />
+
+                <DatePicker
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/espace_between_components"
+                    android:layout_marginTop="@dimen/espace_between_components"
+                    android:calendarViewShown="false"
+                    android:scaleX="0.80"
+                    android:scaleY="0.80" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/espace_between_components"
+                    android:layout_marginTop="@dimen/espace_between_components"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/confirmBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Confirmer" />
+
+                    <Button
+                        android:id="@+id/resultBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="49dp"
+                        android:text="Voir Resultat" />
+                </LinearLayout>
+            </LinearLayout>
 
         </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <EditText
-                android:id="@+id/seanceresultInput"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/matiereresultInput"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="1dp"
-                android:ems="10"
-                android:hint="Séance" />
-
-            <DatePicker
-                android:id="@+id/date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/matiereresultInput"
-                android:layout_below="@+id/seanceresultInput"
-                android:layout_marginTop="1dp" 
-                android:calendarViewShown="false"/>
-
-            <Button
-                android:id="@+id/confirmBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/matiereresultInput"
-                android:layout_marginTop="22dp"
-                android:layout_toLeftOf="@+id/resultBtn"
-                android:text="Confirmer" />
-
-            <Button
-                android:id="@+id/resultBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/confirmBtn"
-                android:layout_alignBottom="@+id/confirmBtn"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="32dp"
-                android:text="Voir Resultat" />
-
-            <EditText
-                android:id="@+id/matiereresultInput"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/confirmBtn"
-                android:layout_below="@+id/date"
-                android:layout_marginTop="1dp"
-                android:ems="10"
-                android:hint="Matière" />
-
-        </RelativeLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
 

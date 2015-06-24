@@ -2,7 +2,6 @@ package weal.exemple.com.myprojectenseignant;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,10 +16,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //startActivity(new Intent(this.getApplicationContext(), LoginActivity.class));
-//startActivity(new Intent(this.getApplicationContext(), Inscription_Enseignant.class));
-        startActivity(new Intent(this.getApplicationContext(), LogA.class));
-//startActivity(new Intent(this.getApplicationContext(), QuestionCaseCocher.class));
         finish();
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();

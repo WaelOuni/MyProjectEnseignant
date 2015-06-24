@@ -45,10 +45,13 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/seancetestInput"
             android:layout_below="@+id/seancetestInput"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="13dp"
-            android:calendarViewShown="false" />
 
-    </RelativeLayout>
+
+            android:layout_marginTop="13dp"
+            android:calendarViewShown="false"
+            android:scaleX="0.80"
+            android:scaleY="0.80"
+            />
+      </RelativeLayout>
 
 </LinearLayout>

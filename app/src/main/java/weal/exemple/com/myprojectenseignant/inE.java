@@ -59,9 +59,9 @@ public class inE extends Activity {
         myTabHost.setup();
 
 
-        myTabHost.addTab(myTabHost.newTabSpec("tab_a").setIndicator("etape 1",getResources().getDrawable(android.R.drawable.ic_menu_view)).setContent(R.id.tab1));
-        myTabHost.addTab(myTabHost.newTabSpec("tab_b").setIndicator("etape 2",getResources().getDrawable(android.R.drawable.ic_menu_view)).setContent(R.id.tab2));
-        myTabHost.addTab(myTabHost.newTabSpec("tab_c").setIndicator("etape 3",getResources().getDrawable(android.R.drawable.ic_menu_view)).setContent(R.id.tab3));
+        myTabHost.addTab(myTabHost.newTabSpec("tab_a").setIndicator("Step 1",getResources().getDrawable(android.R.drawable.ic_menu_view)).setContent(R.id.tab1));
+        myTabHost.addTab(myTabHost.newTabSpec("tab_b").setIndicator("Step 2",getResources().getDrawable(android.R.drawable.ic_menu_view)).setContent(R.id.tab2));
+        myTabHost.addTab(myTabHost.newTabSpec("tab_c").setIndicator("Step 3",getResources().getDrawable(android.R.drawable.ic_menu_view)).setContent(R.id.tab3));
 
 
         creercompte = (Button) findViewById(R.id.creercompteBtn);
@@ -89,7 +89,7 @@ public class inE extends Activity {
                         && (gradeStr != null) && (gradeStr.trim().length() > 0)&& (specialiteStr != null) && (specialiteStr.trim().length() > 0)
                         && (telephoneStr != null) && (telephoneStr.trim().length() > 0)) {
 
-                    params.add(new BasicNameValuePair("cin", cin.getText().toString()));
+                    params.add(new BasicNameValuePair("cin_enseignant", cin.getText().toString()));
                     params.add(new BasicNameValuePair("nom", nom.getText().toString()));
                     params.add(new BasicNameValuePair("prenom", prenom.getText().toString()));
                     params.add(new BasicNameValuePair("genre", genreStr));
@@ -101,7 +101,7 @@ public class inE extends Activity {
                     DownloadTask dlTask = new DownloadTask();
                     dlTask.execute();
                     inE.this.finish();
-                }else Toast.makeText(getApplicationContext(), "Tous les champs sont obligatoires !!! !", Toast.LENGTH_LONG).show();
+                }else Toast.makeText(getApplicationContext(), "All fields are required!!!", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -182,7 +182,7 @@ public class inE extends Activity {
         protected void onPostExecute(String returnString) {
             //strs=returnString.split("\n\t");
 
-            Toast.makeText(inE.this,"Ajout d'un nouveau enseignant avec succes" , Toast.LENGTH_LONG).show();
+            Toast.makeText(inE.this,"Your enregistration has been completed succusfully " , Toast.LENGTH_LONG).show();
         }
 
     }

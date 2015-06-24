@@ -111,7 +111,7 @@ public class AlT extends Activity {
         strURL+=newstr;
     }
 
-    public   String strURL = "http://10.0.2.2/MyProjectConnect/Enseignant/";
+    public   String strURL = "http://10.0.3.2/MyProjectConnect/Enseignant/";
     public class DownloadTask extends AsyncTask<UrlEncodedFormEntity, Void, String> {
 
         @Override
@@ -132,7 +132,7 @@ public class AlT extends Activity {
             catch(Exception e){
                 Log.e("log_tag", "Error in http connection " + e.toString());
             }
-            // Convertion de la requÃªte en string
+            // Convertion de la requete en string
             try{
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is,"iso-8859-1"),8);
                 StringBuilder sb = new StringBuilder();
@@ -152,17 +152,17 @@ public class AlT extends Activity {
                 for(int i=0;i<jArray.length();i++){
                     JSONObject json_data = jArray.getJSONObject(i);
                     // Affichage ID_question et Nom_question dans le LogCat
-                    Log.i("log_tag","id: "+json_data.getInt("id") +
-                                    ", matiere: "+json_data.getString("matiere")+
-                                    ", niveau: "+json_data.getString("niveau")+
-                                    ", seance: "+json_data.getString("seance")+
-                                    ", date: "+json_data.getString("date")+
-                                    ", duree: "+json_data.getString("duree")
+                    Log.i("log_tag","id: "+json_data.getInt("id_test") +
+                                    ", matiere: "+json_data.getString("subject_test")+
+                                    ", niveau: "+json_data.getString("level_test")+
+                                    ", seance: "+json_data.getString("session_test")+
+                                    ", date: "+json_data.getString("date_test")+
+                                    ", duree: "+json_data.getString("duration_test")
                     );
                     // RÃ©sultats de la requÃªte
 
-                    returnString += "\n\t"+json_data.getInt("id")+"." + json_data.getString("matiere")+".." + json_data.getString("niveau")
-                            +"..." + json_data.getString("seance")+"...." + json_data.getString("date")+"....." + json_data.getString("duree");
+                    returnString += "\n\t"+json_data.getInt("id_test")+"." + json_data.getString("subject_test")+".." + json_data.getString("level_test")
+                            +"..." + json_data.getString("session_test")+"...." + json_data.getString("date_test")+"....." + json_data.getString("duration_test");
                 }
             }
             catch(JSONException e){
@@ -283,12 +283,6 @@ public class AlT extends Activity {
 
                 socket = new Socket(serverAddr, SERVERPORT);
                 System.out.println("test Cliennnnnnnnnnntttt \n");
-
-                System.out.println("test Cliennnnnnnnnnntttt \n");
-
-
-                System.out.println("test Cliennnnnnnnnnntttt \n");
-
 
             } catch (UnknownHostException e1) {
                 e1.printStackTrace();

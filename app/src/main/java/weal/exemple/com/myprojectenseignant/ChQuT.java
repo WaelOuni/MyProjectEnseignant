@@ -91,11 +91,8 @@ public class ChQuT extends Activity {
                 startActivityForResult(CreeIntent, 111);
                 ChQuT.this.finish();
 
-
             }
         });
-
-
 
 
         if (savedInstanceState == null) {
@@ -150,7 +147,7 @@ public class ChQuT extends Activity {
                 for(int i=0;i<jArray.length();i++){
                     JSONObject json_data = jArray.getJSONObject(i);
                     // Affichage ID_question et Nom_question dans le LogCat
-                    Log.i("log_tag","id: "+json_data.getInt("id") +
+                    Log.i("log_tag","id: "+json_data.getInt("idquest") +
                                     ", enonce: "+json_data.getString("enonce") +
                                     ", matiere: "+json_data.getString("matiere")
                     );
@@ -158,7 +155,7 @@ public class ChQuT extends Activity {
                     String enoncestr="";
                     enoncestr=String.copyValueOf(json_data.getString("enonce").toCharArray());
                     enoncestr+="...";
-                    returnString += "\n\t"+json_data.getInt("id")+"- "+enoncestr+ " " + json_data.getString("matiere");
+                    returnString += "\n\t"+json_data.getInt("idquest")+"- "+enoncestr+ " " + json_data.getString("matiere");
                 }
             }
             catch(JSONException e){

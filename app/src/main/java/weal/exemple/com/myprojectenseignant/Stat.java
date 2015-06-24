@@ -75,14 +75,14 @@ public class Stat extends Activity {
                 seastatStr = sea.getText().toString();
                 if ((matstatStr != null) && (matstatStr.trim().length() > 0) &&
                         (seastatStr != null) && (seastatStr.trim().length() > 0) ){
-                    params.add(new BasicNameValuePair("seance", sea.getText().toString()));
-                    params.add(new BasicNameValuePair("date", datestatStr));
-                    params.add(new BasicNameValuePair("matiere", mat.getText().toString()));
+                    params.add(new BasicNameValuePair("subject_test", mat.getText().toString()));
+                    params.add(new BasicNameValuePair("session_test", sea.getText().toString()));
+                    params.add(new BasicNameValuePair("date_test", datestatStr));
                     DownloadTask dlTask = new DownloadTask();
                     dlTask.execute();
                     conf.setVisibility(View.INVISIBLE);
                 }
-                else Toast.makeText(getApplicationContext(), "Tous les champs sont obligatoires !!! !", Toast.LENGTH_LONG).show();
+                else Toast.makeText(getApplicationContext(), "All fields are required !!!", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -90,9 +90,8 @@ public class Stat extends Activity {
 
             @Override
             public void onClick(View arg0) {
-
                 choixIntent = new Intent(getApplicationContext(), StatT.class);
-                choixIntent.putExtra("idtest",id );
+                choixIntent.putExtra("id_test",id );
                 startActivityForResult(choixIntent,80);
                 finish();
 
@@ -188,12 +187,11 @@ public class Stat extends Activity {
                 JSONArray jArray = new JSONArray(result);
                 for(int i=0;i<jArray.length();i++){
                     JSONObject json_data = jArray.getJSONObject(i);
-                    // Affichage ID_question et Nom_question dans le LogCat
-                    Log.i("log_tag","id: "+json_data.getInt("id")
-                    );
-                    id=json_data.getInt("id");
+                  //  Log.i("log_tag","id: "+json_data.getInt("id_test")
+                   // );
+                    id=json_data.getInt("id_test");
                     // Résultats de la requête
-                    returnString +="\n\t"+ json_data.getInt("id");
+                    returnString +="\n\t"+ json_data.getInt("id_test");
                 }
             }
 
@@ -204,8 +202,6 @@ public class Stat extends Activity {
         }
 
         protected void onPostExecute(String returnString) {
-            returnString=String.valueOf(id);
-
             btn.setVisibility(View.VISIBLE);
         }
     }

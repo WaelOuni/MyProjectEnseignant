@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.myproject.Statistique"
     tools:ignore="MergeRootFrame" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,37 +17,38 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal" >
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espace_between_components"
                 android:src="@drawable/stat2" />
 
             <TextView
                 android:id="@+id/idqcc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Statistiques de test"
+                android:layout_marginTop="@dimen/espace_between_components"
+                android:text="Statistic's test"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
         </LinearLayout>
-
-        <RelativeLayout
+<LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+    android:orientation="vertical">
 
             <EditText
                 android:id="@+id/matStatTestInp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="@dimen/espace_between_components"
                 android:ems="10"
-                android:hint="Matiére :" >
+                android:hint="Subject :"
+
+                android:layout_marginStart="@dimen/espace_between_components">
 
                 <requestFocus />
             </EditText>
@@ -52,43 +57,48 @@
                 android:id="@+id/seanStatTestInp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/matStatTestInp"
-                android:layout_below="@+id/matStatTestInp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="@dimen/espace_between_components"
                 android:ems="10"
-                android:hint="Séance :" />
+                android:hint="Session :"
+
+                android:layout_marginStart="@dimen/espace_between_components"/>
 
             <DatePicker
                 android:id="@+id/dateStat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/seanStatTestInp"
-                android:layout_below="@+id/seanStatTestInp"
-                android:layout_marginTop="1dp"
-                android:calendarViewShown="false" />
+                android:layout_marginTop="@dimen/espace_between_components"
+                android:calendarViewShown="false"
+                android:padding="-40dp"
+                android:scaleY="0.80"
+                android:scaleX="0.80"
+
+                android:layout_marginStart="@dimen/espace_between_components"
+                />
 
             <Button
                 android:id="@+id/VoirStatBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/dateStat"
-                android:layout_below="@+id/dateStat"
-                android:layout_marginTop="1dp"
-                android:text="Voir statistiques" />
+                android:layout_marginTop="@dimen/espace_between_components"
+                android:layout_marginStart="@dimen/espace_between_components"
+                android:text="Show Statistics"
+                 />
 
             <Button
                 android:id="@+id/confirmerStatBtn"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/VoirStatBtn"
-                android:layout_alignBottom="@+id/VoirStatBtn"
-                android:layout_toRightOf="@+id/VoirStatBtn"
-                android:text="Confirmer" />
+                android:layout_marginTop="@dimen/espace_between_components"
 
-        </RelativeLayout>
+                android:layout_marginStart="@dimen/espace_between_components"
+                android:text="Confirm"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
-
+    </ScrollView>
 </FrameLayout>
 

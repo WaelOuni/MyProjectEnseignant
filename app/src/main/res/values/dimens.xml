@@ -3,6 +3,7 @@
   -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+  <dimen name="espace_between_components" >30dp</dimen>
     <dimen name="vmin">32dip</dimen>
     <dimen name="valuemin">4dip</dimen>
 </resources>

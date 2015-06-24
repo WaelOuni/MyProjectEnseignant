@@ -53,9 +53,7 @@ public class CrQ extends Activity {
                     if (textType.isChecked()) {
                         choixIntent = new Intent(getApplicationContext(), QuT.class);
                     } else if (qcmType.isChecked()) {
-
                         choixIntent = new Intent(getApplicationContext(), QuCC.class);
-
                     } else
                         Toast.makeText(getApplicationContext(), "choisir un type !", Toast.LENGTH_LONG).show();
 

@@ -70,25 +70,20 @@ public class QuCC extends Activity {
         if(extras == null) {
             newString= null;
         } else {
-
             String source=getCallingActivity().getShortClassName();
             source=source.substring(1);
-
             newString= (String) extras.getString("quests");
-
             somme="";
             str= new char[newString.length()-2];
             newString.getChars(1, newString.length()-1, str, 0);// pour elliminer les []
             for (int i=0; i<newString.length()-2;i++){
                 somme=somme+str[i];
             }
-
             //Toast.makeText(getApplicationContext(), somme, Toast.LENGTH_LONG).show();
             strs=somme.split(",");
             Toast.makeText(getApplicationContext(), strs[0]+" "+strs[1], Toast.LENGTH_LONG).show();
 
         }
-
 
 
 
@@ -125,12 +120,12 @@ public class QuCC extends Activity {
                 if ((ennonceStr != null) && (ennonceStr.trim().length() > 0) && (reponseStr != null) && (reponseStr.trim().length() > 0)
                         && (ch1Str != null) && (ch1Str.trim().length() > 0) && (ch2Str != null) && (ch2Str.trim().length() > 0)
                         && (ch3Str != null) && (ch3Str.trim().length() > 0) ) {
-
-                    params.add(new BasicNameValuePair("enoncecc", ennonce.getText().toString()));
-                    params.add(new BasicNameValuePair("reponsecc", reponse.getText().toString()));
-                    params.add(new BasicNameValuePair("choixa", ch1.getText().toString()));
-                    params.add(new BasicNameValuePair("choixb", ch2.getText().toString()));
-                    params.add(new BasicNameValuePair("choixc", ch3.getText().toString()));
+//`id_question`, `statement`, `choice1`, `choice2`, `choice3`, `answer`, `id_subject`, `cin_teacher`
+                    params.add(new BasicNameValuePair("statement", ennonce.getText().toString()));
+                    params.add(new BasicNameValuePair("choice1", ch1.getText().toString()));
+                    params.add(new BasicNameValuePair("choice2", ch2.getText().toString()));
+                    params.add(new BasicNameValuePair("choice3", ch3.getText().toString()));
+                    params.add(new BasicNameValuePair("answer", reponse.getText().toString()));
                     params.add(new BasicNameValuePair("matierecc", strs[0]));
                     params.add(new BasicNameValuePair("niveaucc", strs[1]));
                     DownloadTask dlTask = new DownloadTask();

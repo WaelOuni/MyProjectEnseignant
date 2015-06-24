@@ -224,7 +224,7 @@ public class AlQ extends Activity {
                                     ", matiere: "+json_data.getString("matiere")+
                                     ", niveau: "+json_data.getString("niveau")
                     );
-                    // RÃ©sultats de la requÃªte
+                    // Résultats de la requéte
                     String niveaustr="";
                     niveaustr=String.copyValueOf(json_data.getString("niveau").toCharArray());
                     niveaux.add(niveaustr);

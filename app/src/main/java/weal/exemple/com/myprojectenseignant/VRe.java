@@ -60,7 +60,7 @@ public class VRe extends Activity {
 
             newInt=  extras.getInt("identifiant");
 
-            if (source.equals("ResultatTest")){
+            if (source.equals("ReT")){
 
                 params.add(new BasicNameValuePair("id", String.valueOf(newInt)));
                 Toast.makeText(getApplicationContext(), String.valueOf(newInt), Toast.LENGTH_LONG).show();
@@ -183,14 +183,14 @@ public class VRe extends Activity {
                 for(int i=0;i<jArray.length();i++){
                     JSONObject json_data = jArray.getJSONObject(i);
                     // Affichage ID_question et Nom_question dans le LogCat
-                    Log.i("log_tag","cin: "+json_data.getInt("cin") +
+                    /*Log.i("log_tag","cin: "+json_data.getInt("cin") +
                                     ", nom: "+json_data.getString("nom") +
                                     ", prenom: "+json_data.getString("prenom") +
                                     ", numrepjust: "+json_data.getString("numrepjust")+
                                     ", mention: "+json_data.getString("mention") +
                                     ", rapidite: "+json_data.getString("rapidite")
-                    );
-                    // RÃ©sultats de la requÃªte
+                    );*/
+                    // RÃ©sultats de la requète
                     returnString += "\n\t ID: "+json_data.getInt("cin")+" NOM: "+ json_data.getString("nom")
                             +" PRENOM: "+ json_data.getString("prenom")+" N° REPONSE(s) JUSTE(s): "+ json_data.getString("numrepjust")
                             +" MENTION: "+ json_data.getString("mention")+" RAPIDITE: "+ json_data.getString("rapidite");

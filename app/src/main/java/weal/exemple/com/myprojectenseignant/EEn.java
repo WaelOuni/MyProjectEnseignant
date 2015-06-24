@@ -16,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -54,8 +53,6 @@ public class EEn extends Activity {
         setContentView(R.layout.activity_espace_enseignant);
         bienvenue= (TextView) findViewById(R.id.bienvenueString);
         String newString;
-
-
         Bundle  extras = getIntent().getExtras();
         if(extras == null) {
             newString= null;
@@ -63,7 +60,6 @@ public class EEn extends Activity {
 
             String source=getCallingActivity().getShortClassName();
             source=source.substring(1);
-
             newString= (String) extras.getString("login");
 
             params.add(new BasicNameValuePair("email", newString));
@@ -78,15 +74,14 @@ public class EEn extends Activity {
 
             @Override
             public void onClick(View arg0) {
-                startActivity(new Intent(EEn.this, MainActivity.class));
+                startActivity(new Intent(EEn.this, LogA.class));
                 finish();
-
             }
         });
         lv = (ListView)this.findViewById(R.id.menuenseignantLv);
 
-        String[] values = new String[] { "Creer une Question","Liste des questions","CreerTest","Liste de tests"
-                ,"Resultat Test","Liste des etudiants","Profil Enseignant","Statistique"};
+        String[] values = new String[] { "Create question","Questions's list","Create test","all tests"
+                ,"Tests's results","My students","My profil","Statistics "};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, values);
@@ -104,10 +99,6 @@ public class EEn extends Activity {
                 // ListView Clicked item value
                 String  itemValue    = (String) lv.getItemAtPosition(position);
 
-                // Show Alert
-                Toast.makeText(getApplicationContext(),
-                        "Position :" + itemPosition + "  ListItem : " + itemValue, Toast.LENGTH_LONG)
-                        .show();
 
                 switch (position) {
 
@@ -244,32 +235,24 @@ public class EEn extends Activity {
                     Log.i("log_tag","nom: "+json_data.getString("nom")+
                                     ", prenom: "+json_data.getString("prenom")
                     );
-                    // RÃ©sultats de la requÃªte
+                    // Résultats de la requéte
                     returnString += "\n\t"+ json_data.getString("nom")+" "+json_data.getString("prenom");
-
                 }
-
             }
 
             catch(JSONException e){
-
                 Log.e("log_tag", "Error parsing data " + e.toString());
-
             }
 
             return returnString;
         }
 
         protected void onPostExecute(String returnString) {
-            //	Toast.makeText(AllQuestCC.this,returnString, Toast.LENGTH_LONG).show();
-
             strs=returnString.split("\n\t");
-            bienvenue.setText("Vous êtes le bienvenue "+strs[0]+" "+strs[1]);
-
+            bienvenue.setText("You're welcom dear teacher" +
+                    ""+strs[0]+" "+strs[1]);
         }
     }
-
-
 
 }
 

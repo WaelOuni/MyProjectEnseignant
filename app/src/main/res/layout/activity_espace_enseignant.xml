@@ -27,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Mon espace "
+                android:text="My space"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
         </LinearLayout>
@@ -42,7 +42,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="78dp"
-                android:text="Quitter" />
+                android:text="Sign out" />
 
             <TextView
                 android:id="@+id/bienvenueString"
@@ -63,7 +63,7 @@
                 <ListView
                     android:id="@+id/menuenseignantLv"
                     android:layout_width="match_parent"
-                    android:layout_height="248dp" >
+                    android:layout_height="340dp" >
                 </ListView>
             </LinearLayout>
             

@@ -50,7 +50,7 @@ public class StatT  extends Activity {
 
             String source=getCallingActivity().getShortClassName();
             source=source.substring(1);
-            newInt=  extras.getInt("idtest");
+            newInt=  extras.getInt("id_test");
             //  		newInt= Statistique.id;
             //	Toast.makeText(getApplicationContext(), String.valueOf(newInt), Toast.LENGTH_LONG).show();
             params.add(new BasicNameValuePair("id", String.valueOf(newInt)));
