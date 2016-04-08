@@ -1,2 +1,2 @@
 # MyProjectEnseignant
-Ma projet android pour gérer les enseignants dans une établissemlent scolaire 
+Ma projet android dédie pour les enseignants dans une établissemlent scolaire
